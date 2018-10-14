@@ -1,7 +1,7 @@
 # Analise de Texto usando R e Orange3 (Python)
 
 ## Analise dos programas de governo presidenciais
-
+![useful image](Politica/Imagens/BolsoPol.jpeg)
 ## 1. Obtendo os dados
 Antes de tudo, como uma boa analise de dados, devemos obter os dados para tal. Como os programas de governo dos candidatos ja esta em forma de texto o nosso trabalho diminui.
 ### Fonte de dados dos programas de Governo dos candidatos
