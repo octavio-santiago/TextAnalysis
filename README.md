@@ -1,7 +1,7 @@
 # Analise de Texto usando R e Orange3 (Python)
 
 ## Analise dos programas de governo presidenciais
-![useful image](Politica/Imagens/BolsoPol.jpeg)
+
 ## 1. Obtendo os dados
 Antes de tudo, como uma boa analise de dados, devemos obter os dados para tal. Como os programas de governo dos candidatos ja esta em forma de texto o nosso trabalho diminui.
 ### Fonte de dados dos programas de Governo dos candidatos
@@ -238,10 +238,12 @@ p <- haddad_unnested %>%
 
 p
 ```
-### Polaridade Bolsonaro (grafico)
+### Polaridade Bolsonaro 
 Apresenta pontos bastante polarizado com pontos bem distantes de distribuidos.
-### Polaridade Haddad (grafico)
+![useful image](Politica/Imagens/BolsoPol.jpeg)
+### Polaridade Haddad 
 Apresenta pontos menos polarizados e tendendo ao centro do grafico com apenas um "outlier" bastante positivo.
+![useful image](Politica/Imagens/HadPol.jpeg)
 
 ### Positividade e Negatividade das propostas
 Filtrar os dados entre -10 e 10.
@@ -333,7 +335,7 @@ bolsonaro_wide %>%
   labs(x = "Índice da Frases", y = "Sentimento",
        fill = NULL, title = "Evolução do sentimento no programa Bolsonaro")
 ```
-(Grafico)
+![useful image](Politica/Imagens/EvTextoBolso.jpeg)
 Haddad:
 ```
 haddad_wide %>% 
@@ -344,7 +346,7 @@ haddad_wide %>%
   labs(x = "Índice da Frases", y = "Sentimento",
        fill = NULL, title = "Evolução do sentimento no programa Haddad")
 ```
-(Grafico)
+![useful image](Politica/Imagens/EvoTextoHad.jpeg)
 
 
 Vamos ver a soma dos sentimentos e ver qual prevalece. Veremos os comentarios positivos, negativos e o sentimento. O sentimento sera a soma dos dois, logo quanto maior o sentimento melhor. Para remover qualquer bias, analisaremos em porcentagem do total.
@@ -425,7 +427,7 @@ bolsonaro %>%
   ggplot(aes(x = termo, y = sentiment)) + 
   geom_col(fill = "#C10534")
 ```
-(grafico)
+![useful image](Politica/Imagens/BolsoTopicos.jpeg)
 
 Haddad:
 ```
@@ -460,7 +462,7 @@ haddad %>%
   geom_col(fill = "#C10534")
 ```
 
-(grafico)
+![useful image](Politica/Imagens/HadTopicos.jpeg)
 
 
 
@@ -468,46 +470,3 @@ haddad %>%
 
 
 
-
-
-
-
-
-
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/octaviobomfim/TextAnalysis/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/octaviobomfim/TextAnalysis/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
